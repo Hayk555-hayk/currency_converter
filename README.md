@@ -25,7 +25,3 @@ This application allows users to convert between major currencies using up-to-da
 - **HttpClient** for consuming REST API
 - **Newtonsoft.Json** or **System.Text.Json** for JSON parsing
 
----
-
-## 📂 Project Structure
-

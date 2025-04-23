@@ -5,9 +5,87 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CurrencyConverter"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Curency Converter" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+            <RowDefinition Height="80" />
+            <RowDefinition Height="150" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="150" />
+        </Grid.RowDefinitions>
 
+        <Border Grid.Row="2" Width="800" CornerRadius="10" BorderThickness="5" Margin="10">
+            <Border.BorderBrush>
+                <LinearGradientBrush>
+                    <GradientStop Color="#ec2075" Offset="0.0"/>
+                    <GradientStop Color="#f33944" Offset="0.50"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+            <Rectangle Grid.Row="2">
+                <Rectangle.Fill>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#ec2075" Offset="0.0"/>
+                        <GradientStop Color="#f33944" Offset="0.50"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+        </Border>
+
+        <StackPanel Grid.Row="0" Width="1000" Height="50" Orientation="Horizontal">
+            <Label 
+                Content="CURRENCY CONVERTER" 
+                Width="1000"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                FontSize="25"
+                Foreground="#ec2075"
+                   />
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" >
+
+            <StackPanel Margin="10" Width="200">
+                <Label Content="Amount" Foreground="#FFF" FontWeight="Bold"/>
+                <TextBox Height="30" FontSize="16" />
+            </StackPanel>
+
+            <StackPanel Margin="10" Width="200">
+                <Label Content="From Currency" Foreground="#FFF" FontWeight="Bold"/>
+                <ComboBox Height="30" FontSize="16">
+                    <ComboBoxItem Content="USD" />
+                    <ComboBoxItem Content="EUR" />
+                    <ComboBoxItem Content="RUB" />
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Margin="10" Width="200">
+                <Label Content="To Currency" Foreground="#FFF" FontWeight="Bold"/>
+                <ComboBox Height="30" FontSize="16">
+                    <ComboBoxItem Content="USD" />
+                    <ComboBoxItem Content="EUR" />
+                    <ComboBoxItem Content="RUB" />
+                </ComboBox>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="Convert" Foreground="#fff" Margin="10" Width="150" Height="30">
+                <Button.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#ec2075" Offset="0.0"/>
+                        <GradientStop Color="#f33944" Offset="0.50"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Content="Clear" Foreground="#fff" Margin="10" Width="150" Height="30">
+                <Button.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#ec2075" Offset="0.0"/>
+                        <GradientStop Color="#f33944" Offset="0.50"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </StackPanel>
     </Grid>
 </Window>
